@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.form-container{
+    height: 60vh;
+}
+
+form{
+    background-color: #626C66;
+}

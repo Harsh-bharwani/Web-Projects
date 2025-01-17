@@ -4,3 +4,16 @@ img{
 #computer-result-img{
     height: 120px;
 }
+#image-text{
+    width: 45vw;
+    font-family: Brush Script MT;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+.jersey-15-regular {
+    font-family: "Jersey 15", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+

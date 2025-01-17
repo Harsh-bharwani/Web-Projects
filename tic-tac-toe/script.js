@@ -40,7 +40,7 @@ game.addEventListener("click", (e)=>{
         enable_button();
     }
     if(box.getAttribute("class")!="game"){   // box.tagName==="BUTTON"
-        if(turn.innerText==="O") {
+        if(turn.innerText=="O") {
             box.innerText="O";
             turn.innerText="X";                
         }
@@ -72,7 +72,6 @@ function drawMsg(){
 function printResetMsg(){
     turn_container.classList.add("print-reset-msg");
     turn_container.innerHTML="<marquee scrollamount='10' direction='left'>Please Reset the game!</marquee>";
-    turn_container.classList.add("print-reset-msg");
 }
 function enable_button(){
     turn.innerText="O";
@@ -95,11 +94,11 @@ function disable_button(){
 }
 resetButton.addEventListener("click", ()=>{
     clickSound.play();
-    enable_button();
     winMsg.classList.add("hide");
     total_count=0;
     turn_container.classList.remove("print-reset-msg");
-    turn_container.innerHTML="<span>Turn: </span><div id='turn'>O</div>"
+    // turn_container.innerHTML="<span>Turn: </span><div id='turn'></div>";
+    enable_button();
     for(box of boxes){
         box.classList.remove("highlight");
     }
