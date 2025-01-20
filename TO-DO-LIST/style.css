@@ -1,0 +1,6 @@
+.strikethrough{
+    text-decoration: line-through;
+    color: white;
+    text-decoration-color: rgb(66, 65, 65);
+    background-color: green;
+}
