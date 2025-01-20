@@ -14,8 +14,8 @@ addTaskbtn.addEventListener("click", ()=>{
                 <div class="bg-secondary rounded-2 p-2 m-2">
                     <div class="d-flex justify-content-between">
                         <div class="m-2 p-1">    
-                            <input id="task-checkbox" type="checkbox">
-                             <input id="task-input" required type="text" value="task">
+                            <input id="task-checkbox" type="checkbox" disabled>
+                            <input class="rounded" id="task-input" required type="text" placeholder="Enter the task">
                         </div>
                         <button id="del-btn" class="btn btn-danger m-2 me-4">Delete</button>
                     </div>
@@ -63,20 +63,25 @@ addTaskbtn.addEventListener("click", ()=>{
         }
     });
     li.querySelector("#task-checkbox").addEventListener("change", ()=>{
-        if(!li.querySelector("#task-checkbox").checked){
-            li.querySelector("#task-input").classList.remove("strikethrough");
-            oldProgVal=document.querySelector("progress").getAttribute("value");
-            document.querySelector("progress").setAttribute("value",Number(oldProgVal)-1);
-        }
-        else{
-            li.querySelector("#task-input").classList.add("strikethrough");
-            oldProgVal=document.querySelector("progress").getAttribute("value");
-            document.querySelector("progress").setAttribute("value",Number(oldProgVal)+1)
-        }
+            if(!li.querySelector("#task-checkbox").checked){
+                li.querySelector("#task-input").classList.remove("strikethrough");
+                oldProgVal=document.querySelector("progress").getAttribute("value");
+                document.querySelector("progress").setAttribute("value",Number(oldProgVal)-1);
+            }
+            else{
+                li.querySelector("#task-input").classList.add("strikethrough");
+                oldProgVal=document.querySelector("progress").getAttribute("value");
+                document.querySelector("progress").setAttribute("value",Number(oldProgVal)+1)
+            }
     })
     oldProgMax=document.querySelector("progress").getAttribute("max");
     document.querySelector("progress").setAttribute("max",Number(oldProgMax)+1);
-    
+    li.querySelector("#task-input").addEventListener("input", (event)=>{
+        let value=event.target.value;
+        if(value.trim()!=="") {
+            li.querySelector("#task-checkbox").disabled=false;
+        }
+    }) 
 });
 
 modeBtn.addEventListener("click", ()=>{
