@@ -4,12 +4,17 @@ let taskContainer=document.querySelector(".task-container");
 let taskList=document.querySelector(".task-list")
 let modeBtn=document.querySelector("#mode-btn")
 let delBtn=document.querySelector("#del-btn");
-// let resetBtn=
+
+storeTodos(){
+    localStorage.setItem();
+}
+
+loadTodos
+
 addTaskbtn.addEventListener("click", ()=>{
     let li=document.createElement("li");
     let delBtn=document.querySelector("#del-btn");
     taskList.append(li);
-    // li.classList.add("", '');
     li.innerHTML=`
                 <div class="bg-secondary rounded-2 p-2 m-2">
                     <div class="d-flex justify-content-between">
@@ -82,6 +87,7 @@ addTaskbtn.addEventListener("click", ()=>{
             li.querySelector("#task-checkbox").disabled=false;
         }
     }) 
+    storeTodos();
 });
 
 modeBtn.addEventListener("click", ()=>{
@@ -94,3 +100,4 @@ modeBtn.addEventListener("click", ()=>{
         document.body.classList.remove("bg-dark", "text-light");
     }
 });
+loadtodos();
