@@ -5,12 +5,6 @@ let taskList=document.querySelector(".task-list")
 let modeBtn=document.querySelector("#mode-btn")
 let delBtn=document.querySelector("#del-btn");
 
-storeTodos(){
-    localStorage.setItem();
-}
-
-loadTodos
-
 addTaskbtn.addEventListener("click", ()=>{
     let li=document.createElement("li");
     let delBtn=document.querySelector("#del-btn");
@@ -87,7 +81,6 @@ addTaskbtn.addEventListener("click", ()=>{
             li.querySelector("#task-checkbox").disabled=false;
         }
     }) 
-    storeTodos();
 });
 
 modeBtn.addEventListener("click", ()=>{
@@ -100,4 +93,3 @@ modeBtn.addEventListener("click", ()=>{
         document.body.classList.remove("bg-dark", "text-light");
     }
 });
-loadtodos();
