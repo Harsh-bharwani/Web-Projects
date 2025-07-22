@@ -8,7 +8,7 @@ const search=document.querySelector("#search");
 const msg=document.querySelector("#msg");
 const chats=document.querySelector("#chats");
 
-const msgSentAudio=new Audio("./public/audio/messages-sent.mp3");
+const msgSentAudio=new Audio("./messages-sent.mp3");
 
 function tokenization(){
     messages.forEach((sentence, index)=>{
