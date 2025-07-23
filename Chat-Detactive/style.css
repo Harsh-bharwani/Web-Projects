@@ -28,12 +28,6 @@
         /* height: 55vh; */
         height: 61.5vh;
     }
-     #newMsg{ 
-        width: 98vw;   
-    }
-    /* footer{
-        width: 97.5vw;
-    } */
     #search:focus{
         outline: none !important;
         box-shadow: none !important;
